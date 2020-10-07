@@ -52,9 +52,9 @@ Alt email :<br>
 <input type="email" name="altemail" value="<%=res.getString(8) %>" >
 <br>
 Alt phn :<br>
-<input type="text" name="altphn" value="<%=res.getString(7) %>"  required>
-<br><br>
-<input type="submit" value="submit">
+<input type="text" name="altphn" value="<%=res.getString(7) %>"   >
+<br><br><div id="div" name="div" value="div" ></div>
+<input type="submit" value="submit" onclick="validate()">
 </form>
 <%
 }

@@ -5,7 +5,9 @@
     pageEncoding="ISO-8859-1"%>
     <%@page import="java.sql.DriverManager"%>
 
-<%String id = request.getParameter("customrid");%>
+<%String id = request.getParameter("customrid");
+if(id==null){%>
+<font color=red size="30px">Wrong</font><%}%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -50,9 +52,9 @@ try{
 <td><%=res.getString(6) %></td>
 <td><%=res.getString(7) %></td>
 <td><%=res.getString(8) %></td>
-<td><a href="EditDetails.jsp?id=<%=res.getString(1)%>">update Click to edit primary ph and/or email</a></td>
-<td><a href="EditdetailsAlt.jsp?id=<%=res.getString(1)%>">update Click to edit alternate ph and/or email</a></td>
+
 </tr>
+
 <%
 
 
@@ -64,6 +66,8 @@ try{
 <form action="edit1.html">
 <input type="submit" id="edits1" value="Click to edit Alternate ph and/or email" />
 </form> -->
+<a href="EditDetails.jsp?id=<%=res.getString(1)%>">update Click to edit primary ph and/or email</a>
+<a href="EditdetailsAlt.jsp?id=<%=res.getString(1)%>">update Click to edit alternate ph and/or email</a>
 <%}
 
 } catch (Exception e) {
