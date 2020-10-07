@@ -25,28 +25,7 @@ try{
 <meta charset="ISO-8859-1">
 <title>Insert title here</title>
 
-<script>
-function validate(){
-	var x=new XMLHttpRequest();
 
-	x.open("GET","Updatedetails.jsp",true);
-	
-	alert("hii lol");
-	x.send();
-	
-	//step 4 how xhr will get response from server
-	//state={0,1,2,3,4}
-	
-	x.onreadystatechange=function(){
-		if(x.readyState==4){
-			var vv=x.responseText;
-			document.getElementById("div").innerHTML=vv;
-			
-		}
-	}
-	
-}
-</script>
 </head>
 <body><center>
 <form method="post" action="Updatedetails.jsp">
