@@ -11,12 +11,31 @@
 <head>
 
  
- <link href="NewFile.css" rel="stylesheet" type="text/css"><link href="Style.css" rel="stylesheet" type="text/css">
+ <link href="css/NewFile.css" rel="stylesheet" type="text/css"><link href="css/style.css" rel="stylesheet" type="text/css">
 
 <meta charset="ISO-8859-1">
 <title>Insert title here</title>
 </head>
 <body>
+<ul>
+   <li><a id="l" href="home.html">Home</a></li>
+  <li class="dropdown"><a href="javascript:void(0)" class="dropbtn">About</a>
+  <div class="dropdown-content">
+  <p>All Citizens bank was founded in 1938. It is an Indian multinational banking and financial services company with its registered office in Pune, Maharshtra and corporate office in Mumbai, Maharashtra. It offers a wide range of banking products, financial services for corporate and retail customers through a variety of delivery channels. The bank has a network of 3241 branches and 9826 ATMs across India and has a presence in 15 countries. It is one of the Big Four banks of India.The bank has subsidiaries in the US and Canada, branches in Singapore, Bahrain, Hong Kong, Qatar, Oman as well as representative offices in United Arab Emirates, Bangladesh and Indonesia. Customer is our first priority and our bank outpaced the national average customer satisfaction score of 491.</p>
+  </div></li>
+  
+  <!-- <li><a href="#news"></a></li> -->
+  
+  <li class="dropdown">
+    <a href="javascript:void(0)" class="dropbtn">Contact</a>
+    <div class="dropdown-content">
+   <p>See us at- All Citizens Bank, India ,800000 <br/>
+      Call at: (+91) 9999999999<br/>
+      email-support@All citizens.co.in
+      </p> 
+    </div>
+  </li>
+</ul>
 <h1>Details of <%=id %></h1>
 <table border="1" vertical>
 <tr>
@@ -62,10 +81,10 @@ if(uu!=null)
 
 </tr>
 </table><br><br><br>  
-<a href="EditDetails.jsp?id=<%=uu.getCustomerid()%>">Click to edit primary phone and/or email</a>
-<a href="EditdetailsAlt.jsp?id=<%=uu.getCustomerid()%>"> Click to edit alternate phone and/or email</a>
+<a id="edits" href="EditDetails.jsp?id=<%=uu.getCustomerid()%>">Click to edit primary phone and/or email</a>
+<a id="edits" href="EditdetailsAlt.jsp?id=<%=uu.getCustomerid()%>"> Click to edit alternate phone and/or email</a>
 <%}
-%>
+%><div class="foot">
 <footer class="footer-area">
     <div class="footer-bottom">
             <div class="container">
@@ -78,6 +97,6 @@ if(uu!=null)
                 </div>
             </div>
         </div>
-        </footer>
+        </footer></div>
 </body>
 </html>
