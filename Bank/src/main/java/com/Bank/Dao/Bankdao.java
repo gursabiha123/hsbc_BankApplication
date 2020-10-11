@@ -23,7 +23,7 @@ public class Bankdao implements Bankdaointerface {
 	{	
 		Usersdetails ue=null;
 		
-		 System.out.println("D"+id.getCustomerid());
+		 System.out.println("D"+id.getCustomerid()+id.getAph()+id.getAmail());
 		 PreparedStatement ps=con.prepareStatement("select * from details where customerid=?");
 			ps.setInt(1, id.getCustomerid());
 			ResultSet res=ps.executeQuery();

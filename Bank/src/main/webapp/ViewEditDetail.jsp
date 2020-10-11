@@ -11,7 +11,7 @@
 <head>
 
  
- <link href="NewFile.css" rel="stylesheet" type="text/css">
+ <link href="NewFile.css" rel="stylesheet" type="text/css"><link href="Style.css" rel="stylesheet" type="text/css">
 
 <meta charset="ISO-8859-1">
 <title>Insert title here</title>
@@ -23,10 +23,10 @@
 <th>Customer id</th>
 <th>Name</th>
 <th>PAN number</th>
-<th>DOB/formation</th>
-<th>Primary ph.</th>
+<th>DOB</th>
+<th>Primary phone</th>
 <th>Primary email</th>
-<th>Alternate ph.</th>
+<th>Alternate phone</th>
 <th>Alternate email</th>
 
 </tr>
@@ -49,7 +49,6 @@ if(uu!=null)
 	System.out.println("Address :"+uu.getAddress());
 	System.out.println("Email :"+uu.getEmail());
 	System.out.println("Password :"+uu.getPassword());*/
-
 %>
 <tr>
 <td><%=uu.getCustomerid()%></td>
@@ -62,10 +61,23 @@ if(uu!=null)
 <td><%=uu.getAmail()%></td>
 
 </tr>
-</table><br>
-<a href="EditDetails.jsp?id=<%=uu.getCustomerid()%>">update Click to edit primary ph and/or email</a>
-<a href="EditdetailsAlt.jsp?id=<%=uu.getCustomerid()%>">update Click to edit alternate ph and/or email</a>
+</table><br><br><br>  
+<a href="EditDetails.jsp?id=<%=uu.getCustomerid()%>">Click to edit primary phone and/or email</a>
+<a href="EditdetailsAlt.jsp?id=<%=uu.getCustomerid()%>"> Click to edit alternate phone and/or email</a>
 <%}
 %>
+<footer class="footer-area">
+    <div class="footer-bottom">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12">
+                        
+                        <p class="copyright">Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved </p>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+        </footer>
 </body>
 </html>

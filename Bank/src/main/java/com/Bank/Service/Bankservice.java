@@ -14,17 +14,16 @@ public class Bankservice implements Bankserviceinterface{
 	}
 
 	public Usersdetails viewdetailsService(Usersdetails u)throws Exception {
-		System.out.println(u.getCustomerid());
+		//System.out.println("in service"+u.getCustomerid()+u.getAph()+u.getAmail());
 		return id.viwdetailsDAO(u) ;	
 	}
 	public Usersdetails editdetailsService(Usersdetails u)throws Exception {
-		System.out.println(u.getCustomerid());
 		return id.editdetailsDAO(u) ;		
 	}
 
 	@Override
 	public Usersdetails editdetailService(Usersdetails u) throws Exception {
-		// TODO Auto-generated method stub
+		
 		return id.editdetailDAO(u) ;
 	}
 
